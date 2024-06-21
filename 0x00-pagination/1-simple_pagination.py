@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ Class Server used to paginate a dataset """
 import csv
 import math
