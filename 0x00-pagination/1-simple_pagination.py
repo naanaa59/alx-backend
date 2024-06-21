@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Class Server  """
+""" Class Server used to paginate a dataset """
 import csv
 import math
 from typing import List, Tuple
