@@ -40,7 +40,7 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = 0, page_size: int = 10) -> Dict:
-        assert 0 < index < len(self.dataset())
+        assert index < len(self.dataset())
         i_data = self.__indexed_dataset
         data = []
         rows = 0
