@@ -43,6 +43,7 @@ class Server:
         assert 0 <= index < len(self.dataset())
         assert isinstance(index, int)
         assert(page_size, int) and page_size > 0
+
         i_data = self.__indexed_dataset
         data = []
         rows = 0
@@ -56,7 +57,7 @@ class Server:
 
         return {
                 "index": index,
-                "data": data,
-                "page_size": page_size,
                 "next_index": next_index,
+                "page_size": page_size,
+                "data": data        
         }
