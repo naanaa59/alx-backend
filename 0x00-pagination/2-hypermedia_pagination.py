@@ -60,6 +60,6 @@ class Server:
             "page": page,
             "data": data_page,
             "next_page": next_page if next_page < total_pages else None,
-            "prev_page": prev_page if prev_page <= 1 else None,
+            "prev_page": prev_page if prev_page >= 1 else None,
             "total_pages": total_pages
         }
