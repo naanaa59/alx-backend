@@ -40,9 +40,12 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+        """ returns a dictionary for Deletion-resilient hypermedia """
+        if index is None:
+            index = 0
         assert 0 <= index < len(self.dataset())
         assert isinstance(index, int)
-        assert(page_size, int) and page_size > 0
+        assert isinstance(page_size, int) and page_size > 0
 
         i_data = self.__indexed_dataset
         data = []
@@ -57,7 +60,7 @@ class Server:
 
         return {
                 "index": index,
-                "next_index": next_index,
+                "data": data,
                 "page_size": page_size,
-                "data": data        
+                "next_index": next_index,
         }
