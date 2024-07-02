@@ -23,7 +23,7 @@ babel = Babel(app)
 @app.route('/', strict_slashes=False)
 def home() -> str:
     """ home route method definition"""
-    return render_template('2-index.html')
+    return render_template('3-index.html')
 
 
 @babel.localselector
