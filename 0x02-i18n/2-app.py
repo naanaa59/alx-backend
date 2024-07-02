@@ -3,6 +3,7 @@
 
 from flask import Flask, render_template, request
 from flask_babel import Babel
+from typing import Optional
 
 
 app = Flask(__name__)
@@ -27,7 +28,7 @@ def home() -> str:
 
 
 @babel.localselector
-def get_locale():
+def get_locale() -> Optional[str]:
     """ get locale definition as localselector for babel"""
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
